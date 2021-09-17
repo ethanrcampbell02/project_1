@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Cyber/Documents/C S 236/project_1/Automaton.h
+Token.h
+C:/Users/Cyber/Documents/C S 236/project_1/Token.h
+
+C:/Users/Cyber/Documents/C S 236/project_1/SLCommentAutomaton.cpp
+SLCommentAutomaton.h
+C:/Users/Cyber/Documents/C S 236/project_1/SLCommentAutomaton.h
+
+C:/Users/Cyber/Documents/C S 236/project_1/SLCommentAutomaton.h
+Automaton.h
+C:/Users/Cyber/Documents/C S 236/project_1/Automaton.h
+
+C:/Users/Cyber/Documents/C S 236/project_1/Token.h
+string
+-
+
