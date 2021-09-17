@@ -1,5 +1,4 @@
 #include "MLCommentAutomaton.h"
-#include <iostream>
 
 void MLCommentAutomaton::S0(const std::string& input) {
     if (input[index] == '#') {
@@ -24,8 +23,13 @@ void MLCommentAutomaton::S1(const std::string& input) {
 }
 
 void MLCommentAutomaton::S2(const std::string& input) {
+
+    if (input[index] == '\n') {
+        newLines++;
+    }
+
     if (index >= input.size()) {
-        Serr();
+        this->type = TokenType::UNDEFINED;
     }
     else if (input[index] != '|') {
         inputRead++;
@@ -40,8 +44,13 @@ void MLCommentAutomaton::S2(const std::string& input) {
 }
 
 void MLCommentAutomaton::S3(const std::string& input) {
+
+    if (input[index] == '\n') {
+        newLines++;
+    }
+
     if (index >= input.size()) {
-        Serr();
+        this->type = TokenType::UNDEFINED;
     }
     else if (input[index] != '#') {
         inputRead++;

@@ -14,8 +14,8 @@ std::string TemplateAutomaton::StrToFind() {
         case TokenType::FACTS:       return "Facts";
         case TokenType::RULES:       return "Rules";
         case TokenType::QUERIES:     return "Queries";
+        default: return "Error";
     }
-    return "ERROR!!!";
 }
 
 void TemplateAutomaton::S0(const std::string& input) {

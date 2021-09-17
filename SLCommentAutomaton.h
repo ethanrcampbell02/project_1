@@ -8,6 +8,7 @@ class SLCommentAutomaton : public Automaton
 {
 private:
     void S1(const std::string& input);
+    void S2(const std::string& input);
 
 public:
     SLCommentAutomaton() : Automaton(TokenType::COMMENT) {}  // Call the base constructor

@@ -7,15 +7,15 @@ class Automaton
 protected:
     int inputRead = 0;
     int newLines = 0;
-    int index = 0;
+    unsigned int index = 0;
     TokenType type;
 
 public:
     // Default constructor -- since we have a constructor that takes a parameter,
     //   the compiler will autogenerate a default constructor if not explicit.
     Automaton() : Automaton(TokenType::UNDEFINED) {}
-
     Automaton(TokenType type) { this->type = type; }
+    virtual ~Automaton() {}
 
     // Start the automaton and return the number of characters read
     //   read == 0 indicates the input was rejected

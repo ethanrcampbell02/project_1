@@ -37,8 +37,8 @@ void Lexer::CreateAutomata() {
     automata.push_back(new TemplateAutomaton(TokenType::RULES));
     automata.push_back(new TemplateAutomaton(TokenType::QUERIES));
     automata.push_back(new StringAutomaton());
-    automata.push_back(new SLCommentAutomaton());
     automata.push_back(new MLCommentAutomaton());
+    automata.push_back(new SLCommentAutomaton());
     automata.push_back(new IdentifierAutomaton());
 }
 
@@ -94,5 +94,5 @@ void Lexer::PrintTokens() {
     for (Token* token : tokens) {
         std::cout << token->ToString() << std::endl;
     }
-    std::cout << "Total Tokens = " << tokens.size() << std::endl;
+    std::cout << "Total Tokens = " << tokens.size();
 }

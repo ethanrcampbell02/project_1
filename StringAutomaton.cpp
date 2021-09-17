@@ -13,8 +13,13 @@ void StringAutomaton::S0(const std::string& input) {
 }
 
 void StringAutomaton::S1(const std::string& input) {
+
+    if (input[index] == '\n') {
+        newLines++;
+    }
+
     if (index >= input.size()) {
-        Serr();
+        this->type = TokenType::UNDEFINED;
     }
     else if (input[index] != '\'') {
         inputRead++;
